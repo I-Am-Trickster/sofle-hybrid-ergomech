@@ -94,12 +94,12 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp ESC     &none           &kp N2               &kp N3            &kp N4              &kp N5             &kp N6     &kp N7               &kp N8             &kp N9           &none            &kp DEL
-&none       &kp NUMBER_1    &kp W                &kp F             &kp P               &kp B              &kp J      &kp L                &kp U              &kp Y            &kp N0           &none
-&none       &mt LEFT_GUI A  &mt LEFT_ALT R       &mt LEFT_SHIFT S  &mt LEFT_CONTROL T  &kp G              &kp M      &mt RIGHT_CONTROL N  &mt RIGHT_SHIFT E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &tog 2
-&none       &none           &kp X                &kp C             &kp D               &kp V              &kp K      &kp H                &kp Q              &kp Z            &none            &tog 3
-&kp C_MUTE  &none           &mt LC(X) SEMICOLON  &mt LC(V) COMMA   &mt LC(C) PERIOD    &layer_switch 1 1  &kp SPACE  &kp BACKSPACE        &kp ENTER          &none            &none
-                                                                                                          &kp ENTER  &kp RIGHT            &kp UP_ARROW       &kp LEFT         &kp DOWN
+&kp ESC       &none           &kp N2               &kp N3              &kp N4                   &kp N5             &kp N6     &kp N7         &kp N8        &kp N9    &none            &kp DEL
+&none         &kp NUMBER_1    &kp W                &kp F               &kp P                    &kp B              &kp J      &kp L          &kp U         &kp Y     &kp N0           &none
+&none         &kp A           &kp R                &kp S               &kp T                    &kp G              &kp M      &kp N          &kp E         &kp I     &kp O            &tog 2
+&kp LEFT_GUI  &kp LEFT_SHIFT  &kp X                &kp C               &kp D                    &kp V              &kp K      &kp H          &kp Q         &kp Z     &kp RIGHT_SHIFT  &tog 3
+&kp C_MUTE    &none           &mt LC(X) SEMICOLON  &mt LEFT_ALT COMMA  &mt LEFT_CONTROL PERIOD  &layer_switch 1 1  &kp SPACE  &kp BACKSPACE  &kp ENTER     &none     &none
+                                                                                                                   &kp ENTER  &kp RIGHT      &kp UP_ARROW  &kp LEFT  &kp DOWN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -120,7 +120,7 @@
 &kp F1     &kp F2         &kp F3          &kp F4            &kp F5            &kp F6           &kp F7            &kp F8        &kp F9        &kp F10       &kp F11    &kp F12
 &none      &kp PERCENT    &kp COLON       &kp HASH          &braces           &kp EXCLAMATION  &kp EQUAL         &kp N7        &kp N8        &kp N9        &kp TILDE  &none
 &kp GRAVE  &kp DOLLAR     &kp QUESTION    &quotation_marks  &parenthesis      &kp AMPERSAND    &add_substract    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0     &none
-&none      &kp BACKSLASH  &kp UNDERSCORE  &angled_brackets  &square_brackets  &kp PIPE         &multiply_divide  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp CARET  &none
+&trans     &kp BACKSLASH  &kp UNDERSCORE  &angled_brackets  &square_brackets  &kp PIPE         &multiply_divide  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp CARET  &none
 &trans     &none          &none           &none             &none             &trans           &kp AT_SIGN       &trans        &trans        &none         &none
                                                                                                &trans            &trans        &trans        &trans        &trans
             >;
@@ -139,12 +139,12 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp ESC       &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &trans  &trans  &trans  &trans  &trans  &trans
-&kp F13       &kp TAB         &kp Q         &kp W         &kp E             &kp R         &trans  &trans  &trans  &trans  &trans  &trans
-&kp F14       &kp F15         &kp A         &kp S         &kp D             &kp F         &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_GUI  &kp LEFT_SHIFT  &kp Z         &kp X         &kp C             &kp V         &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &kp F16         &kp F17       &kp LEFT_ALT  &kp LEFT_CONTROL  &kp SPACE     &trans  &trans  &trans  &trans  &trans
-                                                                                          &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp GRAVE       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F13  &kp TAB         &kp Q         &kp W         &kp E             &kp R         &trans  &trans  &trans  &trans  &trans  &trans
+&kp F14  &kp F15         &kp A         &kp S         &kp D             &kp F         &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp LEFT_SHIFT  &kp Z         &kp X         &kp C             &kp V         &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp F16         &kp F17       &kp LEFT_ALT  &kp LEFT_CONTROL  &kp SPACE     &trans  &trans  &trans  &trans  &trans
+                                                                                     &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -161,8 +161,8 @@
             label = "adjust";
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &none        &none       &none   &none   &none   &none
-&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none        &none       &none   &none   &none   &none
-&none              &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &none        &none       &none   &none   &none   &none
+&none              &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &none            &none        &none       &none   &none   &none   &none
+&ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &none        &none       &none   &none   &none   &none
 &none              &none            &none            &none            &none            &none            &none        &none       &none   &none   &none   &trans
 &rgb_ug RGB_TOG    &none            &none            &none            &sys_reset       &bootloader      &bootloader  &sys_reset  &none   &none   &none
                                                                                                         &trans       &trans      &trans  &trans  &trans
