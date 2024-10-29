@@ -118,7 +118,7 @@
 
             bindings = <
 &kp F1     &kp F2         &kp F3          &kp F4            &kp F5            &kp F6           &kp F7            &kp F8        &kp F9        &kp F10       &kp F11    &kp F12
-&none      &kp PERCENT    &kp COLON       &kp HASH          &braces           &kp EXCLAMATION  &kp EQUAL         &kp N7        &kp N8        &kp N9        &kp TILDE  &none
+&trans     &kp PERCENT    &kp COLON       &kp HASH          &braces           &kp EXCLAMATION  &kp EQUAL         &kp N7        &kp N8        &kp N9        &kp TILDE  &trans
 &kp GRAVE  &kp DOLLAR     &kp QUESTION    &quotation_marks  &parenthesis      &kp AMPERSAND    &add_substract    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N0     &none
 &trans     &kp BACKSLASH  &kp UNDERSCORE  &angled_brackets  &square_brackets  &kp PIPE         &multiply_divide  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp CARET  &trans
 &trans     &none          &none           &none             &none             &trans           &kp AT_SIGN       &trans        &trans        &none         &none
@@ -140,9 +140,9 @@
 
             bindings = <
 &kp ESC  &kp NUMBER_1    &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4      &kp NUMBER_5  &trans  &trans  &trans  &trans  &trans  &trans
-&kp F13  &kp GRAVE       &kp Q         &kp W         &kp E             &kp R         &trans  &trans  &trans  &trans  &trans  &trans
-&kp F14  &kp TAB         &kp A         &kp S         &kp D             &kp F         &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp LEFT_SHIFT  &kp Z         &kp X         &kp C             &kp V         &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp GRAVE       &kp Q         &kp W         &kp E             &kp R         &trans  &trans  &trans  &trans  &trans  &trans
+&kp F13  &kp TAB         &kp A         &kp S         &kp D             &kp F         &trans  &trans  &trans  &trans  &trans  &trans
+&kp F14  &kp LEFT_SHIFT  &kp Z         &kp X         &kp C             &kp V         &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &kp F15         &kp F16       &kp LEFT_ALT  &kp LEFT_CONTROL  &kp SPACE     &trans  &trans  &trans  &trans  &trans
                                                                                      &trans  &trans  &trans  &trans  &trans
             >;
@@ -161,13 +161,13 @@
             label = "adjust";
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &none        &none       &none   &none   &none   &none
-&none              &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &none            &none        &none       &none   &none   &none   &none
+&trans             &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &none            &none        &none       &none   &none   &none   &trans
 &ext_power EP_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF  &none        &none       &none   &none   &none   &none
-&none              &none            &none            &none            &none            &none            &none        &none       &none   &none   &none   &trans
+&none              &none            &none            &none            &none            &none            &none        &none       &none   &none   &none   &none
 &rgb_ug RGB_TOG    &none            &none            &none            &sys_reset       &bootloader      &bootloader  &sys_reset  &none   &none   &none
                                                                                                         &trans       &trans      &trans  &trans  &trans
             >;
-            
+
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
     };
